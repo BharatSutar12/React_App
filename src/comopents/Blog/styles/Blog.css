@@ -1,0 +1,12 @@
+.blogcontainer {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .blogcontainer h3 {
+    margin-bottom: 8px;
+  }
+  
+  .blogcontainer p {
+    margin-top: 8px;
+  }
