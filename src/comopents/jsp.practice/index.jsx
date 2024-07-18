@@ -1,25 +1,25 @@
 function jsppractice() {
 
     // console.log("bubble sort===============")
-    // const bubblesort = (array) => {
-    //     for (let i = 0; i < array.length - 1; i++) {
-    //         let requried = false;
-    //         for (let j = 0; j < array.length - i - 1; j++) {
-    //             if (array[j] > array[j + 1]) {
-    //                 const temp = array[j];
-    //                 array[j] = array[j + 1];
-    //                 array[j + 1] = temp;
-    //                 requried = true;
-    //             }
-    //         }
-    //         if (!requried) {
-    //             break;
-    //         }
-    //     }
-    //     return array;
-    // }
-    // const array = [12, 3, 21, 44, 56, 1, 45, 6];
-    // console.log(bubblesort(array))
+    const bubblesort = (array) => {
+        for (let i = 0; i < array.length - 1; i++) {
+            let requried = false;
+            for (let j = 0; i < array.length - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    const temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                    requried = true;
+                }
+            }
+            if (!requried) {
+                break;
+            }
+        }
+        return array
+    }
+    const array = [12, 21, 3, 4, 2, 43, 46, 67];
+    console.log(bubblesort(array))
 
     // console.log("selection sort============")
     // const selectionsort = (array1) => {
@@ -268,133 +268,133 @@ function jsppractice() {
 
     // }
     // console.log(palindrom("abcba"));
-    const arr = [['a', 1], ['b', 2], ['c', 3]];
-    //output {a:1,b:2,c:3};
-    const object1 = Object.fromEntries(arr);
-    console.log(object1)
+    // const arr = [['a', 1], ['b', 2], ['c', 3]];
+    // //output {a:1,b:2,c:3};
+    // const object1 = Object.fromEntries(arr);
+    // console.log(object1)
 
-    console.log("map funn ===========")
-    const x = [1, 2, 3, 4, 5];
-    const y = x.map(item => {
-        return item * 2
-    });
-    console.log(y);
+    // console.log("map funn ===========")
+    // const x = [1, 2, 3, 4, 5];
+    // const y = x.map(item => {
+    //     return item * 2
+    // });
+    // console.log(y);
 
-    console.log("foreack==========")
-    const a = [1, 2, 3, 4, 5];
-    a.forEach(item => {
-        console.log(item)
+    // console.log("foreack==========")
+    // const a = [1, 2, 3, 4, 5];
+    // a.forEach(item => {
+    //     console.log(item)
 
-    });
-    console.log("prime number===========")
+    // });
+    // console.log("prime number===========")
 
-    const checkprime = (number) => {
-        let isprime = true;
-        for (let i = 0; i < number; i++) {
-            if (number % 2 === 0) {
-                isprime = false;
-                console.log(number + " is not prime no")
-            }
-        } if (isprime) {
-            console.log(number + " is prime no")
-        }
-    }
-    checkprime(5)
-    checkprime(10)
+    // const checkprime = (number) => {
+    //     let isprime = true;
+    //     for (let i = 0; i < number; i++) {
+    //         if (number % 2 === 0) {
+    //             isprime = false;
+    //             console.log(number + " is not prime no")
+    //         }
+    //     } if (isprime) {
+    //         console.log(number + " is prime no")
+    //     }
+    // }
+    // checkprime(5)
+    // checkprime(10)
 
-    console.log("remove duplicate ===============")
+    // console.log("remove duplicate ===============")
 
-    const arr1 = [12, 21, 12, 34, 21, 45, 34, 56];
+    // const arr1 = [12, 21, 12, 34, 21, 45, 34, 56];
 
-    const output = [];
-    for (let i = 0; i < arr1.length; i++) {
-        const number = arr1[i];
+    // const output = [];
+    // for (let i = 0; i < arr1.length; i++) {
+    //     const number = arr1[i];
 
-        let exit = false;
-        for (let j = 0; j < output.length; j++) {
-            if (output[j] === number) {
-                exit = true;
-                break;
-            }
-        } if (!exit) {
-            output.push(number);
-        }
-    }
-    console.log(output);
+    //     let exit = false;
+    //     for (let j = 0; j < output.length; j++) {
+    //         if (output[j] === number) {
+    //             exit = true;
+    //             break;
+    //         }
+    //     } if (!exit) {
+    //         output.push(number);
+    //     }
+    // }
+    // console.log(output);
 
-    console.log("remove ele in array========");
+    // console.log("remove ele in array========");
 
-    const arr2 = [1, 2, 3, 4, 5, 6, 7, 8];
-    let removeele = [2, 4, 6, 8];
-    let removeelemap = {};
+    // const arr2 = [1, 2, 3, 4, 5, 6, 7, 8];
+    // let removeele = [2, 4, 6, 8];
+    // let removeelemap = {};
 
-    removeele.forEach(ele => {
-        removeelemap[ele] = true;
-    });
-    console.log(removeelemap)
+    // removeele.forEach(ele => {
+    //     removeelemap[ele] = true;
+    // });
+    // console.log(removeelemap)
 
-    let newarray = [];
-    for (let i = 0; i < arr2.length; i++) {
-        if (!removeelemap[arr2[i]]) {
-            newarray.push(arr2[i]);
-        }
-    }
-    console.log(newarray);
+    // let newarray = [];
+    // for (let i = 0; i < arr2.length; i++) {
+    //     if (!removeelemap[arr2[i]]) {
+    //         newarray.push(arr2[i]);
+    //     }
+    // }
+    // console.log(newarray);
 
-    console.log("spread operator=============")
+    // console.log("spread operator=============")
 
-    const A = [1, 2, 3];
-    const B = [4, 5];
+    // const A = [1, 2, 3];
+    // const B = [4, 5];
 
-    const c = [...A, ...B];
-    console.log(c);
+    // const c = [...A, ...B];
+    // console.log(c);
 
-    const student = [];
-    let student1 = {
-        id: 1,
-        name: "bharat",
-        age: 20,
-    }
-    delete student1.name
-    student1.name = "om"
+    // const student = [];
+    // let student1 = {
+    //     id: 1,
+    //     name: "bharat",
+    //     age: 20,
+    // }
+    // delete student1.name
+    // student1.name = "om"
 
-    let student2 = {
-        id: 2,
-        name: "krishna",
-        age: 12,
-    };
+    // let student2 = {
+    //     id: 2,
+    //     name: "krishna",
+    //     age: 12,
+    // };
 
 
-    student1 = {
-        ...student1,
-        name: "mayur",
-        age: 21,
-        address: "shree colony",
-    }
+    // student1 = {
+    //     ...student1,
+    //     name: "mayur",
+    //     age: 21,
+    //     address: "shree colony",
+    // }
 
-    student2 = {
-        ...student2,
-        id: 3,
-        age: 21,
-        sex: "male",
-    }
-    console.log("s1", student1)
-    console.log("s2", student2);
+    // student2 = {
+    //     ...student2,
+    //     id: 3,
+    //     age: 21,
+    //     sex: "male",
+    // }
+    // console.log("s1", student1)
+    // console.log("s2", student2);
 
-    student.push(student1);
-    student.push(student2);
+    // student.push(student1);
+    // student.push(student2);
 
-    console.log(student)
+    // console.log(student)
 
-    //string
+    // //string
 
-    let name = "bharat sutar";
-    const newname = name.replace("b", "s");
-    console.log(newname)
+    // let name = "bharat sutar";
+    // const newname = name.replace("b", "s");
+    // console.log(newname)
 
-    let number = 5;
-    console.log(++number)
-    console.log(+"10" + 10)
+    // let number = 5;
+    // console.log(++number)
+    // console.log(+"10" + 10)
     return (
         <>
 
